@@ -3,7 +3,10 @@ import flet as ft
 
 def main(page: ft.Page):
     page.title = "My Flet App"
-    page.add(ft.Text("Hello, Flet on Web!"))
+    page.add(
+        ft.Text("Hello, Flet on Web!"),
+        ft.Image(src="img/70337.jpg",width=300,height=300)
+        )
 
 if __name__ == "__main__":
     # Render や Railway では PORT 環境変数にポート番号が入ることが多い
@@ -11,6 +14,6 @@ if __name__ == "__main__":
 
     ft.app(
     target=main,
-    view=ft.AppView.WEB_BROWSER,
-    port=int(os.environ.get("PORT", 8080))
+    # view=ft.AppView.WEB_BROWSER,
+    # port=int(os.environ.get("PORT", 8080))
 )
