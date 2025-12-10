@@ -10,5 +10,7 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
 
     ft.app(
-        target=main,             # 外部からアクセスできるように
-    )
+    target=main,
+    view=ft.AppView.WEB_BROWSER,
+    port=int(os.environ.get("PORT", 8080))
+)
